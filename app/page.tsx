@@ -2,6 +2,7 @@ import Image from "next/image";
 import { MdPool, MdDeck } from "react-icons/md";
 import { GiBrickWall, GiWaterfall, GiWoodenFence } from "react-icons/gi";
 import { FaArchway, FaShower, FaTrashAlt, FaSun } from "react-icons/fa";
+import Link from "next/link";
 export default function Home() {
     const services = [
         {
@@ -104,12 +105,12 @@ export default function Home() {
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4 text-center">
-                            <a
-                                href="#"
+                            <Link
+                                href="/contact"
                                 className="block w-full rounded bg-sky-700 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                             >
                                 Get A Quote
-                            </a>
+                            </Link>
 
                             <a
                                 href="#"
