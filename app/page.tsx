@@ -1,7 +1,91 @@
 import Image from "next/image";
+import { MdPool, MdDeck } from "react-icons/md";
+import { GiBrickWall, GiWaterfall, GiWoodenFence } from "react-icons/gi";
+import { FaArchway, FaShower, FaTrashAlt, FaSun } from "react-icons/fa";
 export default function Home() {
+    const services = [
+        {
+            title: "New Pool Construction",
+            desc: "Transform your backyard into a luxurious oasis with Dreamscapes' new pool construction services. Our experienced team designs and builds custom pools that are tailored to your unique style and preferences, ensuring that you can enjoy the ultimate outdoor living experience.",
+            border: "border-sky-500",
+            bg: "bg-sky-500",
+            text: "text-white",
+            icon: <MdPool className="w-10 h-10 text-white" />,
+        },
+        {
+            title: "Paver Patios",
+            desc: "Upgrade your outdoor living space with Dreamscapes' paver patio installation services. Our skilled team uses high-quality materials and expert techniques to create beautiful, durable patios that are both functional and stylish.",
+            border: "border-sky-600",
+            bg: "bg-white",
+            text: "text-gray-800",
+            icon: <MdDeck className="w-10 h-10" />,
+        },
+
+        {
+            title: "Retaining Walls",
+            desc: "Add structural support and visual appeal to your outdoor space with Dreamscapes' retaining wall services. Our team creates custom retaining walls that are designed to meet your specific needs, whether you need to prevent soil erosion or create an attractive garden feature.",
+            border: "border-sky-600",
+            bg: "bg-white",
+            text: "text-gray-800",
+            icon: <GiBrickWall className="w-10 h-10" />,
+        },
+
+        {
+            title: "Waterfalls",
+            desc: "Create a tranquil and serene outdoor space with Dreamscapes' waterfall installation services. Our team designs and installs custom waterfalls that are tailored to your preferences, providing a relaxing and calming atmosphere in your backyard.",
+            border: "border-sky-600",
+            bg: "bg-sky-500",
+            text: "text-white",
+            icon: <GiWaterfall className="w-10 h-10 text-white" />,
+        },
+
+        {
+            title: "Pergolas",
+            desc: "Enhance your outdoor living space with a beautiful and functional pergola from Dreamscapes. Our team designs and builds custom pergolas that are tailored to your style and preferences, providing shade, privacy, and a stylish addition to your backyard.",
+            border: "border-sky-600",
+            bg: "bg-sky-500",
+            text: "text-white",
+            icon: <FaArchway className="w-10 h-10 text-white" />,
+        },
+
+        {
+            title: "Fencing",
+            desc: "Secure your outdoor space and enhance your privacy with Dreamscapes' fence installation services. Our team creates custom fences that are designed to meet your specific needs, whether you're looking for added security or a stylish accent to your backyard.",
+            border: "border-sky-600",
+            bg: "bg-white",
+            text: "text-gray-800",
+            icon: <GiWoodenFence className="w-10 h-10" />,
+        },
+
+        {
+            title: "Outdoor Shower",
+            desc: "Add a touch of luxury to your backyard with Dreamscapes' outdoor shower installation services. Our team creates custom outdoor showers that are both functional and stylish, providing a refreshing and convenient way to cool off after a swim or a workout.",
+            border: "border-sky-600",
+            bg: "bg-white",
+            text: "text-gray-800",
+            icon: <FaShower className="w-10 h-10" />,
+        },
+
+        {
+            title: "Trash Enclosures",
+            desc: "Keep your outdoor space neat and tidy with Dreamscapes' trash enclosure installation services. Our team creates custom trash enclosures that are designed to meet your specific needs, providing a stylish and convenient solution for keeping your outdoor space clean.",
+            border: "border-sky-600",
+            bg: "bg-sky-500",
+            text: "text-white",
+            icon: <FaTrashAlt className="w-10 h-10 text-white" />,
+        },
+
+        {
+            title: "Porches / 4 Seasons Rooms",
+            desc: "Extend your outdoor living season with Dreamscapes' porch and 4 seasons room installation services. Our team creates custom porches and rooms that are designed to meet your specific needs, providing a comfortable and stylish way to enjoy the outdoors all year round.",
+            border: "border-sky-600",
+            bg: "bg-sky-500",
+            text: "text-white",
+            icon: <FaSun className="w-10 h-10 text-white" />,
+        },
+    ];
     return (
-        <main>
+        <main className="">
             <section className="relative  bg-[url('/2022-09-0.JPG')] bg-cover bg-center bg-no-repeat">
                 <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"></div>
 
@@ -22,7 +106,7 @@ export default function Home() {
                         <div className="mt-8 flex flex-wrap gap-4 text-center">
                             <a
                                 href="#"
-                                className="block w-full rounded bg-sky-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
+                                className="block w-full rounded bg-sky-700 px-12 py-3 text-sm font-medium text-white shadow hover:bg-sky-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto"
                             >
                                 Get A Quote
                             </a>
@@ -38,23 +122,26 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="about">
-                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
-                    <header className="text-center">
-                        <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                            About Us
-                        </h2>
-                    </header>
-                    <div className="grid md:grid-cols-2">
+            <section id="about" className="scroll-mt-20">
+                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8 max-h-fit">
+                    <div className="grid md:grid-cols-2 h-fit gap-6">
                         <div>
+                            <header
+                                className="max-w-md mx-auto
+                            "
+                            >
+                                <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
+                                    About Us
+                                </h2>
+                            </header>
                             <p className="max-w-md mx-auto mt-4 text-gray-500">
-                                Welcome to Dreamscapes Pools and Patios, the
-                                premier provider of custom-built outdoor living
-                                spaces in Delaware. Our team of expert designers
-                                and craftsmen are dedicated to transforming your
-                                backyard into a beautiful, functional, and
-                                relaxing oasis that you and your family can
-                                enjoy for years to come.
+                                Welcome to <b>Dreamscapes Pools and Patios</b>,
+                                the premier provider of custom-built outdoor
+                                living spaces in Delaware. Our team of expert
+                                designers and craftsmen are dedicated to
+                                transforming your backyard into a beautiful,
+                                functional, and relaxing oasis that you and your
+                                family can enjoy for years to come.
                             </p>
                             <p className="max-w-md mx-auto mt-4 text-gray-500">
                                 At Dreamscapes, we pride ourselves on delivering
@@ -86,15 +173,16 @@ export default function Home() {
                         </div>
                         <Image
                             src="/pexels-karolina-grabowska-4219524.jpg"
-                            width={500}
+                            width={424}
                             height={300}
                             alt="About Us Image"
-                            className="rounded-lg p-4 hidden md:block"
+                            className="rounded-lg p-4 hidden md:block overflow-hidden pt-6"
                         />
                     </div>
                 </div>
             </section>
-            <section id="services">
+            <hr className="my-12 h-0.5 border-t-0 bg-gray-200 opacity-100 dark:opacity-50" />
+            <section id="services" className="scroll-mt-20">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                     <header className="text-center">
                         <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
@@ -102,134 +190,32 @@ export default function Home() {
                         </h2>
                     </header>
                     <div className="grid md:grid-cols-2 pt-8 gap-6">
-                        <div className="block rounded-xl border border-sky-600 bg-sky-700 p-4 shadow-xl sm:p-6 lg:p-8">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-10 w-10 text-blue-400"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+                        {services.map((service, index) => (
+                            <div
+                                key={index}
+                                className={`block rounded-xl border ${service.border} ${service.bg} p-4 shadow-xl sm:p-6 lg:p-8`}
                             >
-                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                                />
-                            </svg>
+                                {service.icon}
 
-                            <h3 className="mt-3 text-lg font-bold text-white sm:text-xl">
-                                Lorem, ipsum dolor.
-                            </h3>
+                                <h3
+                                    className={`mt-3 text-lg font-bold ${service.text} sm:text-xl`}
+                                >
+                                    {service.title}
+                                </h3>
 
-                            <p className="mt-4 text-sm text-gray-300">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Odio eius labore nisi tempore
-                                modi vel voluptate ullam nostrum adipisci
-                                suscipit eaque quae cupiditate, accusamus minus
-                                laboriosam totam laborum, deserunt sint.
-                            </p>
-                        </div>
-                        <div className="block rounded-xl border border-gray-800 bg-white p-4 shadow-xl sm:p-6 lg:p-8">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-10 w-10 text-blue-400"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                                />
-                            </svg>
-
-                            <h3 className="mt-3 text-lg font-bold text-gray-700 sm:text-xl">
-                                Lorem, ipsum dolor.
-                            </h3>
-
-                            <p className="mt-4 text-sm text-gray-700">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Odio eius labore nisi tempore
-                                modi vel voluptate ullam nostrum adipisci
-                                suscipit eaque quae cupiditate, accusamus minus
-                                laboriosam totam laborum, deserunt sint.
-                            </p>
-                        </div>
-                        <div className="block rounded-xl border border-gray-800 bg-white p-4 shadow-xl sm:p-6 lg:p-8">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-10 w-10 text-blue-400"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                                />
-                            </svg>
-
-                            <h3 className="mt-3 text-lg font-bold text-gray-700 sm:text-xl">
-                                Lorem, ipsum dolor.
-                            </h3>
-
-                            <p className="mt-4 text-sm text-gray-700">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Odio eius labore nisi tempore
-                                modi vel voluptate ullam nostrum adipisci
-                                suscipit eaque quae cupiditate, accusamus minus
-                                laboriosam totam laborum, deserunt sint.
-                            </p>
-                        </div>
-                        <div className="block rounded-xl border border-gray-800 bg-gray-900 p-4 shadow-xl sm:p-6 lg:p-8">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-10 w-10 text-blue-400"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                                />
-                            </svg>
-
-                            <h3 className="mt-3 text-lg font-bold text-white sm:text-xl">
-                                Lorem, ipsum dolor.
-                            </h3>
-
-                            <p className="mt-4 text-sm text-gray-300">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Odio eius labore nisi tempore
-                                modi vel voluptate ullam nostrum adipisci
-                                suscipit eaque quae cupiditate, accusamus minus
-                                laboriosam totam laborum, deserunt sint.
-                            </p>
-                        </div>
+                                <p className={`mt-4 text-sm ${service.text} `}>
+                                    {service.desc}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
-            <section id="projects">
+            <section id="gallery" className="scroll-mt-20">
                 <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                     <header className="text-center">
                         <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
-                            Pools and Patios
+                            Gallery
                         </h2>
                     </header>
                     <div className="grid md:grid-cols-2 pt-8 gap-6"></div>
