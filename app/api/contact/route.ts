@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   `;
 
     const data = {
-        to: "james@dreamscapepoolandpatio.com",
+        to: "no-reply@marchess.dev",
         from: "no-reply@marchess.dev",
         subject: `New Contact Form Submission From ${res.name}`,
         text: message,
