@@ -113,7 +113,7 @@ export default function Home() {
                             </Link>
 
                             <a
-                                href="#"
+                                href="#gallery"
                                 className="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-sky-600 shadow hover:text-sky-700 focus:outline-none focus:ring active:text-rose-500 sm:w-auto"
                             >
                                 See Our Work

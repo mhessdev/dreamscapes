@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { FaAddressBook, FaDirections, FaPhone } from "react-icons/fa";
 
 export default function Contact() {
     const [name, setName] = useState("");
@@ -55,16 +56,29 @@ export default function Contact() {
                             backyard into the ultimate oasis!
                         </p>
 
-                        <div className="mt-8">
+                        <div className="mt-4 flex flex-col gap-3">
                             <a
-                                href=""
-                                className="text-2xl font-bold text-pink-600"
+                                href="tel:3029456964"
+                                className="text-2xl font-bold text-pink-600 flex justify-start gap-3 items-center hover:underline"
                             >
-                                0151 475 4450
+                                <FaPhone></FaPhone>302-945-6964
+                            </a>
+                            <a
+                                href="tel:3028415348"
+                                className="font-bold flex justify-start gap-3 items-center hover:underline"
+                            >
+                                <FaPhone></FaPhone> <span>+1 302-841-5348</span>
                             </a>
 
-                            <address className="mt-2 not-italic">
-                                282 Kevin Brook, Imogeneborough, CA 58517
+                            <address className="mt-2 not-italic flex justify-start gap-3 items-center">
+                                <FaDirections></FaDirections>
+                                <a
+                                    target="_blank"
+                                    className="hover:underline"
+                                    href="https://goo.gl/maps/siWWL1LJJvKrZji97"
+                                >
+                                    28816 Four of Us Rd, Harbeson, DE 19951
+                                </a>
                             </address>
                         </div>
                     </div>
