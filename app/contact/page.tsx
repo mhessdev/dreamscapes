@@ -8,10 +8,19 @@ export default function Contact() {
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
     const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState(false);
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        console.log(name, email, phone, message);
+        // console.log(name, email, phone, message);
+        if (!name || !email || !phone || !message) {
+            setError(true);
+            setTimeout(() => {
+                setError(false);
+            }, 5000);
+            return;
+        }
+
         let data = {
             name,
             email,
@@ -165,6 +174,15 @@ export default function Contact() {
                         <p className="text-center text-sm font-medium">
                             Thanks for getting in contact. We will get back to
                             you soon!
+                        </p>
+                    </div>
+                </div>
+            )}
+            {error && (
+                <div className="fixed inset-x-0 bottom-0 p-4">
+                    <div className="rounded-lg bg-red-600 px-4 py-3 text-white shadow-lg">
+                        <p className="text-center text-sm font-medium">
+                            Please fill out all fields.
                         </p>
                     </div>
                 </div>
