@@ -6,6 +6,27 @@ import { Lato } from "next/font/google";
 export const metadata = {
     title: "Dreamscapes Pools and Patios",
     description: "Make your Pool and Patio Dreams a Reality",
+    openGraph: {
+        title: "Dreamscapes Pools and Patios",
+        description: "Make your Pool and Patio Dreams a Reality",
+        url: "https://dreamscapespoolandpatio.com",
+        siteName: "Dreamscapes Pools and Patios",
+        images: [
+            {
+                url: "/dreamscapes-pool-and-patio-og-image.png",
+                width: 800,
+                height: 600,
+            },
+            {
+                url: "/dreamscapes-pool-and-patio-og-image.png",
+                width: 1800,
+                height: 1600,
+                alt: "Dreamscapes Pools and Patios",
+            },
+        ],
+        locale: "en-US",
+        type: "website",
+    },
 };
 
 const lato = Lato({
