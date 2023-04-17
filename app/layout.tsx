@@ -48,12 +48,18 @@ export default function RootLayout({
                     className="bg-white sticky top-0 z-50 shadow-sm h-24"
                 >
                     <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 pt-8">
-                        <Link href="/">
+                        <Link
+                            href="/"
+                            className="relative h-8 w-8 sm:h-16 sm:w-16"
+                        >
                             <Image
                                 src="/dream-scape-pools-logo.png"
                                 alt="Dreamscapes Pools and Patios Logo"
-                                width={75}
-                                height={50}
+                                sizes="100vw"
+                                fill
+                                style={{
+                                    objectFit: "contain",
+                                }}
                             />
                         </Link>
 
@@ -85,6 +91,15 @@ export default function RootLayout({
                                         >
                                             Gallery
                                         </a>
+                                    </li>
+
+                                    <li className="sm:hidden">
+                                        <Link
+                                            className="text-gray-500 transition hover:text-gray-500/75"
+                                            href="/contact"
+                                        >
+                                            Contact
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -140,15 +155,23 @@ export default function RootLayout({
                                 <li>
                                     <a
                                         className="text-gray-700 transition hover:text-gray-700/75"
-                                        href="#Gallery"
+                                        href="#gallery"
                                     >
-                                        Pools &amp; Patios
+                                        Gallery
                                     </a>
+                                </li>
+                                <li>
+                                    <Link
+                                        className="text-gray-700 transition hover:text-gray-700/75"
+                                        href="/contact"
+                                    >
+                                        Contact Us
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>
 
-                        <ul className="mt-12 flex justify-center gap-6 md:gap-8">
+                        {/* <ul className="mt-12 flex justify-center gap-6 md:gap-8">
                             <li>
                                 <a
                                     href="/"
@@ -213,7 +236,7 @@ export default function RootLayout({
                                     </svg>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </footer>
             </body>

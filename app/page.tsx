@@ -224,13 +224,12 @@ export default async function Home() {
                 </div>
             </section>
             <section id="gallery" className="scroll-mt-20">
-                <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+                <div className="max-w-screen-xl px-4 pt-8 mx-auto sm:px-6 sm:pt-12 lg:px-8">
                     <header className="text-center">
                         <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">
                             Gallery
                         </h2>
                     </header>
-                    <div className="grid md:grid-cols-2 pt-8 gap-6"></div>
                 </div>
                 {/* <section className="overflow-hidden text-neutral-700">
                     <div className="container mx-auto px-5  ">

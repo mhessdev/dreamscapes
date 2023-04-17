@@ -17,7 +17,7 @@ export default function PhotoGallery({ images }: Props) {
     };
 
     return (
-        <section className="overflow-hidden max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
+        <section className="overflow-hidden max-w-screen-xl px-4 py-4 mx-auto sm:px-6 sm:py-6 lg:px-8">
             <div className="grid grid-cols-3 gap-4">
                 {images.length > 0 &&
                     images.map((src: string, index: number) => (
@@ -59,7 +59,7 @@ export default function PhotoGallery({ images }: Props) {
                         />
                     </div>
                     <button
-                        className="z-70 absolute inset-x-0 bottom-20 h-8 w-8 mx-auto text-white bg-sky-500 rounded-full hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                        className="z-70 absolute inset-x-0 bottom-5 sm:bottom-20 h-8 w-8 mx-auto text-white bg-sky-500 rounded-full hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                         onClick={closeLightbox}
                     >
                         <MdClose className="m-auto text-2xl" />
