@@ -50,7 +50,7 @@ export default function RootLayout({
                     <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8 pt-8">
                         <Link
                             href="/"
-                            className="relative h-8 w-8 sm:h-16 sm:w-16"
+                            className="relative h-12 w-12 sm:h-16 sm:w-16"
                         >
                             <Image
                                 src="/dream-scape-pools-logo.png"
