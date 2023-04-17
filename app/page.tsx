@@ -7,7 +7,8 @@ import path from "path";
 import fs from "fs";
 
 import Link from "next/link";
-export default async function Home() {
+
+export default function Home() {
     const galleryPath: string = path.resolve("./public/gallery");
 
     const fileNames: string[] = fs.readdirSync(galleryPath);
