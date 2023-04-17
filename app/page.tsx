@@ -11,7 +11,8 @@ import Link from "next/link";
 export default function Home() {
     const galleryPath: string = path.resolve("./public/gallery");
 
-    const fileNames: string[] = fs.readdirSync(galleryPath);
+    const fileNames: string[] = fs.readdirSync("./public/gallery");
+
     const galleryImages: string[] = fileNames.map((fileName) => {
         return `/gallery/${fileName}`;
     });

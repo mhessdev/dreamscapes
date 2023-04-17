@@ -52,7 +52,10 @@ export default function PhotoGallery({ images }: Props) {
                             alt={`Dreamscapes Pool and Patio Gallery Image - ${selectedImage}`}
                             className="z-60"
                             fill
-                            sizes="100vw"
+                            sizes="(max-width: 640px) 100vw,
+                                        (max-width: 1280px) 50vw,
+                                        (max-width: 1536px) 33vw,
+                                        25vw"
                             style={{
                                 objectFit: "contain",
                             }}
