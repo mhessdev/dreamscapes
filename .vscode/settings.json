@@ -3,5 +3,5 @@
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "editor.fontSize": 16,
     "terminal.integrated.fontSize": 10,
-    "cSpell.words": ["Dreamscape", "sendgrid"]
+    "cSpell.words": ["Dreamscape", "Lightbox", "sendgrid"]
 }

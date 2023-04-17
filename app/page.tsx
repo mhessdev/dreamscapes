@@ -2,8 +2,19 @@ import Image from "next/image";
 import { MdPool, MdDeck } from "react-icons/md";
 import { GiBrickWall, GiWaterfall, GiWoodenFence } from "react-icons/gi";
 import { FaArchway, FaShower, FaTrashAlt, FaSun } from "react-icons/fa";
+import PhotoGallery from "../components/photo-gallery";
+import path from "path";
+import fs from "fs";
+
 import Link from "next/link";
-export default function Home() {
+export default async function Home() {
+    const galleryPath: string = path.resolve("./public/gallery");
+
+    const fileNames: string[] = fs.readdirSync(galleryPath);
+    const galleryImages: string[] = fileNames.map((fileName) => {
+        return `/gallery/${fileName}`;
+    });
+
     const services = [
         {
             title: "New Pool Construction",
@@ -87,8 +98,8 @@ export default function Home() {
     ];
     return (
         <main className="">
-            <section className="relative  bg-[url('/2022-09-0.JPG')] bg-cover bg-center bg-no-repeat">
-                <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/95 sm:to-white/25"></div>
+            <section className="relative  bg-[url('/DreamScapes-Pool-and-Patio-BackYardImage.JPG')] bg-cover bg-center bg-no-repeat">
+                <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:bg-gradient-to-r sm:from-white/70 sm:to-white/0"></div>
 
                 <div className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
                     <div className="max-w-xl text-center sm:text-left">
@@ -221,7 +232,7 @@ export default function Home() {
                     </header>
                     <div className="grid md:grid-cols-2 pt-8 gap-6"></div>
                 </div>
-                <section className="overflow-hidden text-neutral-700">
+                {/* <section className="overflow-hidden text-neutral-700">
                     <div className="container mx-auto px-5  ">
                         <div className="-m-1 flex flex-wrap md:-m-2">
                             <div className="flex w-1/2 flex-wrap">
@@ -284,7 +295,8 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
+                <PhotoGallery images={galleryImages} />
             </section>
         </main>
     );
