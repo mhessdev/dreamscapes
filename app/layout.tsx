@@ -5,7 +5,8 @@ import { Lato } from "next/font/google";
 
 export const metadata = {
     title: "Dreamscapes Pools and Patios",
-    description: "Make your Pool and Patio Dreams a Reality",
+    description:
+        "Dreamscapes Pools and Patios | Make your Pool and Patio Dreams a Reality",
     openGraph: {
         title: "Dreamscapes Pools and Patios",
         description: "Make your Pool and Patio Dreams a Reality",
