@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     const data = {
         to: "james@dreamscapespoolandpatio.com",
         from: "no-reply@marchess.dev",
-        cc: "no-reply@marchess.dev",
+        cc: "no-reply@marchess.dev, kelsey@dreamscapespoolandpatio.com",
         subject: `New Contact Form Submission From ${res.name}`,
         text: message,
         html: message.replace(/\r\n/g, "<br />"),
